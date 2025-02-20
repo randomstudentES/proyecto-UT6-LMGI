@@ -19,16 +19,17 @@
             <br><label for="fullname">Full name:</label><br><br>
             <input name="fullname" type="text" placeholder="Enter your full name"><br><br>
             <label for="email">Email:</label><br><br>
-            <input name="email" type="text" placeholder="Enter your email"><br><br>
-            <button>Validate</button>
+            <input name="email" type="text" placeholder="Enter your email" id="emailInput"><br><br>
+            <button onclick="comprobarCorreo()">Validate</button><br>
+            <p id="resultEmail"></p>
             <br><br>
             <label for="Gender">Gender:</label><br><br>
-            <label for="Gender">Male</label><input type="radio" name="Gender" id="maleOption">
-            <label for="Gender">Female</label><input type="radio" name="Gender" id="femaleOption">
-            <label for="Gender">Other</label><input type="radio" name="Gender" id="otherOption">
+            <input type="radio" name="Gender" id="maleOption"><label for="Gender">Male</label>
+            <input type="radio" name="Gender" id="femaleOption"><label for="Gender">Female</label>
+            <input type="radio" name="Gender" id="otherOption"><label for="Gender">Other</label>
             <br><br>
             <label for="country">Country:</label><br><br>
-            <select name="country" id="" >
+            <select name="country" id="" style="width: 99%;">
                 <option value="">Select your country</option>
                 <option value="spain">Spain</option>
             </select>
@@ -66,5 +67,6 @@
             <button>Send</button>
         </form>
     </div>
+    <script src="form.js"></script>
 </body>
 </html>
