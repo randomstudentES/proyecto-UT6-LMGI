@@ -9,9 +9,9 @@
 <body>
 
     <div class="navbar">
-        <a href="#">Personalizer</a>
-        <a href="#">Form</a>
-        <a href="#">Images</a>
+        <a href="menu.html">Personalizer</a>
+        <a href="form.html">Form</a>
+        <a href="images.html">Images</a>
         <a href="#">Mode</a>
     </div>
     <div class="form">
@@ -21,8 +21,7 @@
             <label for="email">Email:</label><br><br>
             <input name="email" type="text" placeholder="Enter your email" id="emailInput"><br><br>
             <button onclick="comprobarCorreo()">Validate</button><br>
-            <p id="resultEmail"></p>
-            <br><br>
+            <p id="resultEmail" style="font-weight: bold;"></p>
             <label for="Gender">Gender:</label><br><br>
             <input type="radio" name="Gender" id="maleOption"><label for="Gender">Male</label>
             <input type="radio" name="Gender" id="femaleOption"><label for="Gender">Female</label>
@@ -64,7 +63,7 @@
                 <option value="Pamplona">Pamplona</option>
             </select>
             <br><br>
-            <button>Send</button>
+            <button onclick="activar()">Send</button>
         </form>
     </div>
     <script src="form.js"></script>
