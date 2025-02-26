@@ -1,0 +1,20 @@
+.magicButton, .autoLoading{
+    width: 60%;
+    margin: auto;
+    box-shadow: 0px 0px 5px gray;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.magicButton{
+    margin-top: 5px;
+}
+
+.autoLoading{
+    margin-top: 20px;
+}
+
+img{
+    height: 100px;
+    width: 100px;
+}

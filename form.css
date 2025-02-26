@@ -15,12 +15,12 @@
 }
 
 .form > form > select{
-    height: 2.5vh;
+    height: 3vh;
 }
 
 .form > form > button{
     width: 99%;
-    height: 2.5vh;
+    height: 3vh;
 }
 
 .form > form > select, .form > form > button{
