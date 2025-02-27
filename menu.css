@@ -1,3 +1,12 @@
 .text{
     margin: 20px;
 }
+
+.navbar{
+    float: center;
+}
+
+ul > li{
+    display: inline-block;
+}
+
