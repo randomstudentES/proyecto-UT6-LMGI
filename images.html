@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Top Navbar</title>
-    <link rel="stylesheet" href="form.css">
     <link rel="stylesheet" href="topnav.css">
+    <link rel="stylesheet" href="images.css">
 </head>
 <body>
 
@@ -15,58 +15,46 @@
         <a href="images.html">Images</a>
         <a href="#">Mode</a>
     </div>
-    <div class="form">
-        <form action="">
-            <br><label for="fullname">Full name:</label><br><br>
-            <input name="fullname" type="text" placeholder="Enter your full name"><br><br>
-            <label for="email">Email:</label><br><br>
-            <input name="email" type="text" placeholder="Enter your email" id="emailInput"><br><br>
-            <button onclick="comprobarCorreo()">Validate</button><br>
-            <p id="resultEmail" style="font-weight: bold;"></p>
-            <label for="Gender">Gender:</label><br><br>
-            <input type="radio" name="Gender" id="maleOption"><label for="Gender">Male</label>
-            <input type="radio" name="Gender" id="femaleOption"><label for="Gender">Female</label>
-            <input type="radio" name="Gender" id="otherOption"><label for="Gender">Other</label>
-            <br><br>
-            <label for="country">Country:</label><br><br>
-            <select name="country" id="" style="width: 99%;">
-                <option value="">Select your country</option>
-                <option value="spain">Spain</option>
-            </select>
-            <br><br>
-            <label for="Province">Comunity:</label>
-            <select name="community" id="">
-                <option value="">Select your community</option>
-                <option value="andalucia">Andalucía</option>
-                <option value="aragón">Aragón</option>
-                <option value="asturias">Asturias</option>
-                <option value="islas_baleares">Islas Baleares</option>
-                <option value="canarias">Canarias</option>
-                <option value="cantabria">Cantabria</option>
-                <option value="castilla_la_mancha">Castilla-La Mancha</option>
-                <option value="castilla_y_leon">Castilla y León</option>
-                <option value="catalunya">Cataluña</option>
-                <option value="extremadura">Extremadura</option>
-                <option value="galicia">Galicia</option>
-                <option value="madrid">Madrid</option>
-                <option value="murcia">Murcia</option>
-                <option value="navarra">Navarra</option>
-                <option value="pais_vasco">País Vasco</option>
-                <option value="la_rioja">La Rioja</option>
-                <option value="comunidad_valenciana">Comunidad Valenciana</option>
-                <option value="ceuta">Ceuta</option>
-                <option value="melilla">Melilla</option>
-            </select>
-            <br><br>
-            <label for="Town">Town: </label>
-            <select name="Town" id="">
-                <option value="">Select your town</option>
-                <option value="Pamplona">Pamplona</option>
-            </select>
-            <br><br>
-            <button onclick="activar()">Send</button>
-        </form>
+    <div class="magicButton">
+        <h2 style="color: #0769ec;">Magic Button: Create & Change Image</h2>
+        <button onclick="cambiarImagen(imagenDinamica)">Change Image!</button><br><br>
+        <img src="" alt="" id="dinamica">
     </div>
-    <script src="form.js"></script>
+    <div class="autoLoading">
+        <h2 style="color: #0769ec;">AutoLoading</h2>
+        <img src="" alt="" id="automatica">
+    </div>
+    <script>
+        const imagenDinamica = document.getElementById("dinamica")
+        const imagenAutomatica = document.getElementById("automatica")
+        let numeroDinamica = 1;
+        let numeroAutomatica = 1;
+
+        function cambiarImagen(imagen){
+            imagenDinamica.src = `imagenes/${numeroDinamica}.jpg`;
+            imagenDinamica.style.height = "100px";
+            imagenDinamica.style.width = "100px";
+
+            if (numeroDinamica == 5){
+                numeroDinamica = 1;
+            } else {
+                numeroDinamica+=1;
+            }
+
+        }
+
+        setInterval(() => {
+            imagenAutomatica.src = `imagenes/${numeroAutomatica}.jpg`;
+            imagenAutomatica.style.height = "100px";
+            imagenAutomatica.style.width = "100px";
+            if (numeroAutomatica == 5){
+                numeroAutomatica = 1;
+            } else {
+                numeroAutomatica+=1;
+            }
+        }, 100);
+
+
+    </script>
 </body>
 </html>
