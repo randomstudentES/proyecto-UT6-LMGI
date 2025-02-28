@@ -4,6 +4,7 @@
     border-radius: 5px;
     margin: auto;
     padding: 20px;
+    background-color: white;
 }
 
 .form > form > label{
@@ -31,4 +32,9 @@
 
 .form > form > input[type="radio"]{
     width: 20px;
+}
+
+.dark-mode {
+    background-color: black;
+    color: white;
 }

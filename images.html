@@ -13,14 +13,14 @@
         <a href="menu.html">Personalizer</a>
         <a href="form.html">Form</a>
         <a href="images.html">Images</a>
-        <a href="#">Mode</a>
+        <a onclick="darkMode()" style="cursor: pointer;">Mode</a>
     </div>
-    <div class="magicButton">
+    <div class="magicButton" id="divs">
         <h2 style="color: #0769ec;">Magic Button: Create & Change Image</h2>
         <button onclick="cambiarImagen(imagenDinamica)">Change Image!</button><br><br>
         <img src="" alt="" id="dinamica">
     </div>
-    <div class="autoLoading">
+    <div class="autoLoading" id="divs2">
         <h2 style="color: #0769ec;">AutoLoading</h2>
         <img src="" alt="" id="automatica">
     </div>
@@ -54,6 +54,22 @@
             }
         }, 100);
 
+        let boolDarkMode = false;
+        const divs = document.getElementById("divs");
+        const divs2 = document.getElementById("divs2");
+        function darkMode(){
+            if (!boolDarkMode){
+                document.body.style.backgroundColor = "black";
+                divs.style.backgroundColor = "gray";
+                divs2.style.backgroundColor = "gray";
+                boolDarkMode = true;
+            } else {
+                document.body.style.backgroundColor = "white";
+                divs.style.backgroundColor = "white";
+                divs2.style.backgroundColor = "white";
+                boolDarkMode = false;
+            }
+        }
 
     </script>
 </body>

@@ -13,7 +13,7 @@
         <a href="menu.html">Personalizer</a>
         <a href="form.html">Form</a>
         <a href="images.html">Images</a>
-        <a href="#">Mode</a>
+        <a onclick="darkMode()" style="cursor: pointer;">Mode</a>
     </div>
     <div class="form">
         <form action="">
@@ -68,5 +68,20 @@
         </form>
     </div>
     <script src="form.js"></script>
+    <script>
+        let boolDarkMode = false;
+        const form = document.querySelector(".form");
+        function darkMode() {
+            if (!boolDarkMode) {
+                document.body.style.backgroundColor = "black";
+                form.style.backgroundColor = "gray";
+                boolDarkMode = true;
+            } else {
+                document.body.style.backgroundColor = "white";
+                form.style.backgroundColor = "white";
+                boolDarkMode = false;
+            }
+        }
+    </script>
 </body>
 </html>
