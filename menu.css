@@ -4,9 +4,66 @@
 
 .navbar{
     float: center;
+    max-height: 50px;
 }
 
 ul > li{
     display: inline-block;
 }
 
+
+nav ul li {
+    list-style: none;
+    float: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav ul li a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+
+.despMnu{ 
+    background-color: #333333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+}
+
+.menu{
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    background-color: white;
+}
+  
+.menu button {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+    
+.show {
+    display:block;
+}
+
+.tamanyo, .fuente, .color {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    margin: 5px;
+    cursor: pointer;
+    border: 2px solid black;
+}

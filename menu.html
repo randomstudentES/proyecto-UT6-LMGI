@@ -6,21 +6,95 @@
     <title>Top Navbar</title>
     <link rel="stylesheet" href="topnav.css">
     <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="test.css">
 </head>
 <body>
 
     <div class="navbar">
         <ul>
-            <li><a href="">Personalizer</a>
-                <div class="menu2"></div>
-            </li>
+            <li><button onclick="funcionMenu()" class="despMnu"><b style="font-weight: normal;">Personalizer</b></button>
+                <div id="menu" class="menu">
+                    <label id="clrLbl">Bg_color</label>
+                        <div>
+                            <div class="color" style="background: #e08997;" onclick="cambioColorFondo('#e08997')"></div>
+                            <div class="color" style="background: #9df69b;" onclick="cambioColorFondo('#9df69b')"></div>
+                            <div class="color" style="background: #a7d1fe;" onclick="cambioColorFondo('#a7d1fe')"></div>
+                            <div class="color" style="background: #6a6868;" onclick="cambioColorFondo('#6a6868')"></div>
+                            <div class="color" style="background: #bcb7b7;" onclick="cambioColorFondo('#bcb7b7')"></div>
+                        </div>
+                    <label id="clrLbl">Change_letters</label>
+                        <div>
+                            <div class="color" style="background: #ff002b;" onclick="cambiarColorTexto('#ff002b')"></div>
+                            <div class="color" style="background: #036a02;" onclick="cambiarColorTexto('#036a02')"></div>
+                            <div class="color" style="background: #0d48eb;" onclick="cambiarColorTexto('#0d48eb')"></div>
+                            <div class="color" style="background: #000000;" onclick="cambiarColorTexto('#000000')"></div>
+                            <div class="color" style="background: #ffffff;" onclick="cambiarColorTexto('#ffffff')"></div>
+                        </div>
+                        <div>
+                            <div class="tamanyo" style="background: #bcb7b7;" onclick="cambiarTamanyoTexto('12px')">XS</div>
+                            <div class="tamanyo" style="background: #bcb7b7;" onclick="cambiarTamanyoTexto('15px')">S</div>
+                            <div class="tamanyo" style="background: #bcb7b7;" onclick="cambiarTamanyoTexto('20px')">M</div>
+                            <div class="tamanyo" style="background: #bcb7b7;" onclick="cambiarTamanyoTexto('25px')">L</div>
+                            <div class="tamanyo" style="background: #bcb7b7;" onclick="cambiarTamanyoTexto('30px')">XL</div>
+                        </div>
+                        <div>
+                            <div class="fuente" style="background: #bcb7b7;" onclick="cambiarFuenteTexto('Arial')">A</div>
+                            <div class="fuente" style="background: #bcb7b7;" onclick="cambiarFuenteTexto('Times New Roman')">T</div>
+                            <div class="fuente" style="background: #bcb7b7;" onclick="cambiarFuenteTexto('Courier New')">C</div>
+                            <div class="fuente" style="background: #bcb7b7;" onclick="cambiarFuenteTexto('Lucida Console')">L</div>
+                            <div class="fuente" style="background: #bcb7b7;" onclick="cambiarFuenteTexto('Monospace')">M</div>
+                        </div>
+                </div></li>
             <li><a href="form.html">Form</a></li>
             <li><a href="images.html">Images</a></li>
         </ul>
     </div>
-    <div class="text">
+    <div class="text" id="text">
         <h1>Welcome to Personalizer</h1>
         <p>This is a paragraph that you can adapt its content<br><br>Click to Personalizer banner</p>
     </div>
+    <script>
+        function funcionMenu() {
+            document.getElementById("menu").classList.toggle("show");
+        }
+
+        window.onclick = function(event) {
+            if (!event.target.matches('.despMnu')) {
+                var desplegable = document.getElementsByClassName("menu");
+                var i;
+                for (i = 0; i < desplegable.length; i++) {
+                    var abrirDesplegable = desplegable[1];
+                    if (abrirDesplegable.classList.contains('show')) {
+                        abrirDesplegable.classList.remove('show');
+                    }
+                }
+            }
+        }
+
+        function cambioColorFondo(color) {
+            document.body.style.background = color;
+        }
+
+        function cambiarColorTexto(color) {
+            let b1 = document.getElementById("text"); 
+            if (b1) {
+                b1.style.color = color;
+            }
+        }
+
+        function cambiarTamanyoTexto(tamanyo) {
+            let b1 = document.getElementById("text");
+            if (b1) {
+                b1.style.fontSize = tamanyo;
+            }
+        }
+
+        function cambiarFuenteTexto(tipo) {
+            let b1 = document.getElementById("text");
+            if (b1) {
+                b1.style.fontFamily = tipo;
+            }
+        }
+    </script>
 </body>
 </html>
